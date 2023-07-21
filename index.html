@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>View High scores</h1>
+        <h2 class="timer">Time: 0</h2>
+    </header>
+
+    <!-- welcome screen -->
+    <section class="welcomePage">
+        <h3>Welcome to my Coding Quiz!</h3>
+        <p>Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score/time by ten seconds.</p>
+        <button>Start Quiz</button>
+    </section>
+
+    <!-- question cards -->
+    <section class="questCardsPage">
+        <h4>Dynamic question</h4>
+        <form>
+            <input type="radio" for="question1" name="questions">
+            <label for="question1">Dynamic answer</label>
+            <input type="radio" for="question2" name="questions">
+            <label for="question2">Dynamic answer</label>            
+            <input type="radio" for="question3" name="questions">
+            <label for="question3">Dynamic answer</label>
+            <input type="radio" for="question4" name="questions">
+            <label for="question4">Dynamic answer</label>
+        </form>
+    </section>
+
+    <!-- all done screen -->
+    <section class="finishPage">
+        <h5>All done!</h5>
+        <p>your final score is (dynamically generate number)</p>
+        <input type="text" for="intials" placeholder="Enter initials">
+        <label for="initials"><button>Submit</button></label>
+
+    </section>
+
+    <!-- highscores -->
+    <section class="highScoresPage">
+        <h5>Highscores</h5>
+        <p>dynamically generated list</p>
+        <button>Try Again</button>
+        <button>Clear High Scores</button>
+
+    </section>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

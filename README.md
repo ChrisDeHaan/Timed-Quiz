@@ -16,7 +16,7 @@ The finished project will be a timed, multiple-choice question coding quiz that 
 
 ## References
 
-- 
+- <a href="https://stackoverflow.com/questions/34084048/creating-a-multiple-choice-option-in-javascript">Radio buttons</a>
 
 ## License
 
