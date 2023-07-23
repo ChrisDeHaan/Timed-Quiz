@@ -1,0 +1,31 @@
+/* CSS variables */
+:root {
+    --rose-red: #e95670;
+    --fuchsia: #B34270;
+    --purple-haze: #713770;
+    --indigo: #432F70;
+}
+
+/* Global Element Selectors */
+* {
+    background-color: var(--indigo);
+    max-width: 1440px;
+}
+
+/* Welcome Page selectors */
+
+
+/* question card selectors */
+.questCardsPage {
+    display: none;
+}
+
+/* all done screen selectors */
+.finishPage {
+    display: none;
+}
+
+/* highscores screen selectors */
+.highScoresPage {
+    display: none;
+}
