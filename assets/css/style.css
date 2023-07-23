@@ -1,31 +1,120 @@
 /* CSS variables */
 :root {
     --rose-red: #e95670;
-    --fuchsia: #B34270;
-    --purple-haze: #713770;
+    --dark-indigo: #342558;
+    --light-indigo: #553c8f;
     --indigo: #432F70;
 }
 
 /* Global Element Selectors */
 * {
-    background-color: var(--indigo);
     max-width: 1440px;
+    color: white;
 }
 
-/* Welcome Page selectors */
+/* General class selectors */
+body {
+    padding: 5%;
+    background-color: var(--dark-indigo);
+}
 
+/* persistent header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    height: 100px;
+}
 
-/* question card selectors */
+h1 {
+    padding: 5px;
+    font-size: 1.5em;
+    border-bottom: solid var(--rose-red);
+}
+
+h1:hover {
+    color: var(--rose-red);
+    border-bottom: solid var(--dark-indigo);
+    box-shadow: 0 0 15px var(--rose-red);
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 0 0 7px;
+    background-color: var(--rose-red);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    font-size: 1.3em;
+    border: solid var(--light-indigo);
+    box-shadow: .0 0 20px var(--rose-red);
+}
+
+/* Welcome Page */
+.welcomePage {
+    padding: 50px;
+    margin-top: 30px;
+    border: 7px solid var(--dark-indigo);
+    background-color: var(--indigo);
+    box-shadow: 0 0 10px var(--rose-red);
+    border-radius: 50px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 4em;
+    padding-bottom: 20px;
+}
+
+.wpP {
+    font-size: 2em;
+    padding: 10px;
+}
+
+.wpButton {
+    height: 50px;
+    width: 150px;
+    background-color: var(--dark-indigo);
+    border-radius: 20px;
+    font-size: 1.3em;
+    box-shadow: 0 0 10px black;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.wpButton:hover {
+    background-color: var(--rose-red);
+    color: white;
+
+}
+
+/* question card */
 .questCardsPage {
     display: none;
 }
 
-/* all done screen selectors */
+/* all done screen */
 .finishPage {
     display: none;
 }
 
-/* highscores screen selectors */
+/* highscores screen */
 .highScoresPage {
     display: none;
+}
+
+/* media querys for screen size responsiveness */
+@media (max-width: 450px) {
+    h3 {
+        font-size: 35px;
+    }
+
+    .wpP {
+        font-size: 20px;
+    }
 }
