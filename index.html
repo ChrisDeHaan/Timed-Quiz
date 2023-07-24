@@ -21,22 +21,23 @@
     <section class="welcomePage">
         <h3>Coding Quiz Challenge</h3>
         <p class="wpP">Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score/time by ten seconds.</p>
-        <button class="wpButton">Start Quiz</button>
+        <button class="wpButton" id="wpButton">Start Quiz</button>
     </section>
 
     <!-- question cards -->
     <section class="questCardsPage">
-        <h4>Dynamic question</h4>
-        <form>
-            <input type="radio" for="question1" name="questions">
-            <label for="question1">Dynamic answer</label>
-            <input type="radio" for="question2" name="questions">
-            <label for="question2">Dynamic answer</label>            
-            <input type="radio" for="question3" name="questions">
-            <label for="question3">Dynamic answer</label>
-            <input type="radio" for="question4" name="questions">
-            <label for="question4">Dynamic answer</label>
+        <h4>Commonly used data types do NOT include:</h4>
+        <form class="dynamicForm">
+            <input type="radio" for="question1" name="questions" class ="radioButtons">
+            <label for="question1">Dynamic answer123456</label><br>
+            <input type="radio" for="question2" name="questions" class ="radioButtons">
+            <label for="question2">Dynamic answer123456123456</label><br>     
+            <input type="radio" for="question3" name="questions" class ="radioButtons">
+            <label for="question3">Dynamic answer</label><br>
+            <input type="radio" for="question4" name="questions" class ="radioButtons">
+            <label for="question4">Dynamic answer123</label><br>
         </form>
+        <button class="wpButton" id="qcButtonLoop">Submit</button>
     </section>
 
     <!-- all done screen -->
