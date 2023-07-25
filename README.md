@@ -8,11 +8,17 @@ The finished project will be a timed, multiple-choice question coding quiz that 
 
 ## Deployed Link
 
-
+https://chrisdehaan.github.io/Timed-Quiz/
 
 ## Mock-up
 
+### Mobile:
 
+<img src="./assets/img/Challenge4mobilemockup.png" alt="mobile mockup" width="30%" height="30%">
+
+### Website:
+
+![website-mockup](./assets/img/challenge4websitemockup.png)
 
 ## References
 
