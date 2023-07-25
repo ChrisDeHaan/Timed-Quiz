@@ -19,6 +19,7 @@ The finished project will be a timed, multiple-choice question coding quiz that 
 - <a href="https://stackoverflow.com/questions/34084048/creating-a-multiple-choice-option-in-javascript">Radio buttons</a>
 - <a href="https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/">Radio button values</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">Styling radio buttons</a>
+- <a href="https://stackoverflow.com/questions/49680484/how-to-add-one-event-listener-for-all-buttons">multiple buttons from Aliaksandr Sushkevich</a>
 
 ## License
 
