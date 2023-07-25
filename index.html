@@ -12,9 +12,9 @@
 <body>
 
     <!-- persistent header -->
-    <header>
-        <h1>View Highscores</h1>
-        <h2 class="timer">Time: 60</h2>
+    <header id="header" style="display: flex">
+        <h1 class="timer">Time: 60</h1>
+        <h2 id="viewHighscores" style="display: block">View Highscores</h2>
     </header>
 
     <!-- welcome screen -->
@@ -26,28 +26,28 @@
 
     <!-- question cards -->
     <section class="questCardsPage" id="questCardsPage" style="display: none">
-        <h4 id="q">Dynamic question</h4>
-        <button class="qcButton" id="qcButton1">Dynamic answer</button><br>
-        <button class="qcButton" id="qcButton2">Dynamic answer</button><br>
-        <button class="qcButton" id="qcButton3">Dynamic answer</button><br>
-        <button class="qcButton" id="qcButton4">Dynamic answer</button><br>
+        <h4 id="q"></h4>
+        <button class="qcButton" id="qcButton1"></button><br>
+        <button class="qcButton" id="qcButton2"></button><br>
+        <button class="qcButton" id="qcButton3"></button><br>
+        <button class="qcButton" id="qcButton4"></button><br>
     </section>
 
     <!-- all done screen -->
-    <section class="finishPage" style="display: none">
+    <section class="finishPage" id="finishPage" style="display: none">
         <h5>Finished!</h5>
         <p class="finishP">Your final score is (dynamically generate number).</p>
         <input type="text" for="intials" id="initials" placeholder="Enter initials">
-        <label for="initials"><button class="finishBtn">Submit</button></label>
+        <label for="initials"><button class="finishBtn" id="submissionButton">Submit</button></label>
 
     </section>
 
     <!-- highscores -->
-    <section class="highScoresPage" style="display: none">
+    <section class="highScoresPage" id="highScoresPage" style="display: none">
         <h6>Highscores</h6>
         <p>dynamically generated list</p>
-        <button class="hsTryAgain">Try Again</button>
-        <button class="hsClear">Clear</button>
+        <button class="hsTryAgain" id="tryAgain">Try Again</button>
+        <button class="hsClear" id="hsClear">Clear</button>
 
     </section>
     <script src="./assets/js/script.js"></script>

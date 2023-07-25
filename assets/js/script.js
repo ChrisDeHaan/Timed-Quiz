@@ -24,7 +24,31 @@ function welcomeToggle () { // Welcome button's  toggle
 
 function questionCardsToggle () { // question card's toggle
     var toggle = document.getElementById("questCardsPage")
-    ifElseDisplay(toggle);
+    ifElseDisplay (toggle);
+}
+
+function viewHighscoresToggle () { // View Highscores toggle
+    var toggle = document.getElementById("highScoresPage")
+    ifElseDisplay (toggle);
+}
+
+function viewHighscoresButtonToggle() { //actual View Highscores button toggle
+    var toggle = document.getElementById("viewHighscores")
+    ifElseDisplay (toggle);
+}
+
+function viewFinishPageToggle () { //Finish page toggle
+    var toggle = document.getElementById("finishPage")
+    ifElseDisplay (toggle);
+}
+
+function headerToggle () {//header toggle
+    var toggle = document.getElementById("header")
+    if (toggle.style.display === "none") {
+        toggle.style.display = "flex";
+    } else {
+        toggle.style.display = "none";
+    }
 }
 
 //Event listener for start quiz button
@@ -33,7 +57,17 @@ startQuizBtn.addEventListener("click", () => {
     welcomeToggle();
     questionCardsToggle();
     dynamicInputElem();
+    viewHighscoresButtonToggle();
 } );
+
+//Event listener for View Highscores
+var viewHighScores = document.getElementById("viewHighscores")
+viewHighScores.addEventListener("click", () => {
+    welcomeToggle();
+    viewHighscoresToggle();
+    headerToggle();
+    viewHighscoresButtonToggle();
+})
 
 //Event listener for the answer buttons
 var quizButtons = document.getElementById('questCardsPage')
@@ -50,8 +84,33 @@ quizButtons.addEventListener('click', (event) => { //begin code from Aliaksandr 
         console.log ("correct")
     }
     additiveTruth++
+    console.log (additiveTruth);
+    if (additiveTruth === 5) {
+        questionCardsToggle();
+        viewFinishPageToggle();
+        return;
+    }
 
     dynamicInputElem();
+})
+
+//Event listener for submit button on the finish page
+var submissionButton = document.getElementById("submissionButton")
+submissionButton.addEventListener('click', () => {
+    viewHighscoresToggle();
+    viewFinishPageToggle();
+    headerToggle();
+})
+
+//Event Listener for Try Again
+var tryAgainButton = document.getElementById("tryAgain")
+tryAgainButton.addEventListener('click', () => {
+    viewHighscoresToggle();
+    welcomeToggle();
+    headerToggle()
+    viewHighscoresButtonToggle();
+    additiveTruth = 0
+    additiveQuestion = 0
 })
 
 //my array of objects for the 5 questions
