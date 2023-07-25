@@ -8,7 +8,6 @@
 
 /* Global Element Selectors */
 * {
-    max-width: 1440px;
     color: white;
 }
 
@@ -16,6 +15,8 @@
 body {
     padding: 5%;
     background-color: var(--dark-indigo);
+    max-width: 1440px;
+    margin: auto;
 }
 
 /* persistent header */
