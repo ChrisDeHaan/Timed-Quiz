@@ -58,62 +58,33 @@ quizButtons.addEventListener('click', (event) => { //begin code from Aliaksandr 
 var objArray = [
     {
         question: "Commonly used data types do NOT include:",
-        answers: [
-            {a1: "strings"},
-            {a2: "booleans"},
-            {a3: "alerts"},
-            {a4: "numbers"}
-        ]
+        answers: ["strings", "booleans", "alerts", "numbers"]
     },
     {
         question: "Arrays in JavaScript can be used to store _____.",
-        answers: [
-            {a1: "numbers and strings"},
-            {a2: "other arrays"},
-            {a3: "booleans"},
-            {a4: "all of the above"}
-        ]
+        answers: ["numbers and strings", "other arrays", "booleans", "all of the above"]
     },
     {
         question: "The condition in an if / else statement is enclosed with _____.",
-        answers: [
-            {a1: "quotes"},
-            {a2: "curly brackets"},
-            {a3: "paranthesis"},
-            {a4: "square brackets"}
-        ]
+        answers: ["quotes", "curly brackets", "paranthesis", "square brackets"]
     },
     {
         question: "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answers: [
-            {a1: "JavaScript"},
-            {a2: "terminal/bash"},
-            {a3: "for loops"},
-            {a4: "console.log"}
-        ]
+        answers: ["JavaScript", "terminal/bash", "for loops", "console.log"]
     },
     {
         question: "String values must be enclosed within _____ when being assigned to variables.",
-        answers: [
-            {a1: "commas"},
-            {a2: "curly brackets"},
-            {a3: "quotes"},
-            {a4: "parenthesis"}
-        ]
+        answers: ["commas", "curly brackets", "quotes", "parenthesis"]
     },
 ]
  console.log(objArray[0].answers[3].a4)
 //Dynamic input of questions and answers
 function dynamicInputElem () {
     q.textContent = objArray[additiveQuestion].question
-    a1.textContent = objArray[additiveQuestion].answers[0].a1
-    a2.textContent = objArray[additiveQuestion].answers[1].a2
-    a3.textContent = objArray[additiveQuestion].answers[2].a3
-    a4.textContent = objArray[additiveQuestion].answers[3].a4
+    a1.textContent = objArray[additiveQuestion].answers[0]
+    a2.textContent = objArray[additiveQuestion].answers[1]
+    a3.textContent = objArray[additiveQuestion].answers[2]
+    a4.textContent = objArray[additiveQuestion].answers[3]
 
     additiveQuestion++
-
-    // if (additive === 6) {
-
-    // }
 }
