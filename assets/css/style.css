@@ -56,7 +56,7 @@ h1:hover {
 }
 
 /* Welcome Page */
-.welcomePage {
+.welcomePage, .questCardsPage, .finishPage, .highScoresPage {
     text-align: center;
     padding: 50px;
     margin-top: 40px;
@@ -76,7 +76,7 @@ h3 {
     padding: 10px;
 }
 
-.wpButton {
+.wpButton, .qcButton, .finishBtn, .hsTryAgain, .hsClear {
     margin-top: 30px;
     height: 50px;
     width: 150px;
@@ -88,7 +88,7 @@ h3 {
     cursor: pointer;
 }
 
-.wpButton:hover {
+.wpButton:hover, .qcButton:hover, .finishBtn:hover, .hsTryAgain:hover, .hsClear:hover {
     background-color: var(--rose-red);
     color: white;
 }
@@ -96,12 +96,6 @@ h3 {
 /* question card */
 .questCardsPage {
     padding: 20px;
-    margin-top: 40px;
-    border-radius: 50px;
-    border: 7px solid var(--dark-indigo);
-    background-color: var(--indigo);
-    box-shadow: 0 0 15px black;
-    text-align: center;
 }
 
 .dynamicForm {
@@ -110,23 +104,10 @@ h3 {
 }
 
 .qcButton {
-    margin-top: 30px;
-    height: 50px;
     width: 275px;
-    font-size: 1.3em;
-    box-shadow: 0 0 15px black;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--dark-indigo);
-    cursor: pointer;
 }
 
-.qcButton:hover {
-    background-color: var(--rose-red);
-    color: white;
-}
-
-h4 {
+h4, h6 {
     font-size: 4em;
     text-align: center;
 }
@@ -136,20 +117,51 @@ form {
 }
 
 /* all done screen */
-/* .finishPage {
-} */
+.finishPage {
+    text-align: left;
+    padding: 20px;
+}
+
+h5 {
+    font-size: 4em;
+}
+
+.finishP {
+    font-size: 2em;
+    padding: 20px 0;
+}
+
+#initials {
+    height: 30px;
+    width: 150px;
+    border: 5px solid var(--dark-indigo);
+    box-shadow: 0 0 15px black;
+}
+
+.finishBtn {
+    margin-left: 25px;
+    margin-top: 0;
+    height: 30px;
+    width: 100px;
+    font-size: 1em;
+}
 
 /* highscores screen */
-/* .highScoresPage {
-} */
+.highScoresPage {
+    padding: 15px;
+}
+
+.hsTryAgain, .hsClear {
+    margin: 20px;
+}
 
 /* media querys for screen size responsiveness */
 @media (max-width: 450px) {
-    h3, h4 {
+    h3, h4, h5, h6 {
         font-size: 35px;
     }
 
-    .wpP {
+    .wpP, .finishP {
         font-size: 20px;
     }
 }
