@@ -7,6 +7,9 @@ var a4 = document.getElementById("qcButton4");
 var additiveQuestion = 0
 var additiveTruth = 0
 var trueAnswers = ["alerts", "all of the above", "curly brackets", "console.log", "quotes"]
+var timerEl = document.querySelector(".timer")
+var finalScoreDisplay = document.querySelector(".finishP") 
+var highScoreValue = ""
 
 //Toggle Functions
 function ifElseDisplay (toggle) { // if/else function for toggling visibility
@@ -51,6 +54,32 @@ function headerToggle () {//header toggle
     }
 }
 
+//Timer function
+var timeLeft = 60;
+
+function setTime() {
+    var timerInterval = setInterval( () => {
+        timeLeft--;
+        timerEl.textContent = `Time: ${timeLeft}`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerEl.textContent = `Time: 60`;
+            timeLeft = 60;
+            questionCardsToggle();
+            welcomeToggle();
+            viewHighscoresButtonToggle();
+            alert("Out of time. Please try again!");
+        } else if (document.getElementById("finishPage").style.display === "block") {
+            highScoreValue = timeLeft
+            clearInterval(timerInterval)        
+            //Score display
+            finalScoreDisplay.textContent = `Your final score is ${highScoreValue}.`
+            timeLeft = 60;
+        }
+    }, 1000);
+}
+
 //Event listener for start quiz button
 var startQuizBtn = document.getElementById("wpButton")
 startQuizBtn.addEventListener("click", () => {
@@ -58,6 +87,7 @@ startQuizBtn.addEventListener("click", () => {
     questionCardsToggle();
     dynamicInputElem();
     viewHighscoresButtonToggle();
+    setTime();
 } );
 
 //Event listener for View Highscores
@@ -79,12 +109,11 @@ quizButtons.addEventListener('click', (event) => { //begin code from Aliaksandr 
 
     var selectedButton = event.target.textContent
     if (selectedButton != trueAnswers[additiveTruth]) {
-        console.log ("wrong answer")
+        timeLeft -= 10;
     } else {
         console.log ("correct")
     }
     additiveTruth++
-    console.log (additiveTruth);
     if (additiveTruth === 5) {
         questionCardsToggle();
         viewFinishPageToggle();
@@ -109,8 +138,10 @@ tryAgainButton.addEventListener('click', () => {
     welcomeToggle();
     headerToggle()
     viewHighscoresButtonToggle();
+
     additiveTruth = 0
     additiveQuestion = 0
+    timerEl.textContent = `Time: 60`;
 })
 
 //my array of objects for the 5 questions
@@ -136,7 +167,7 @@ var objArray = [
         answers: ["commas", "curly brackets", "quotes", "parenthesis"]
     },
 ]
- console.log(objArray[0].answers[3].a4)
+
 //Dynamic input of questions and answers
 function dynamicInputElem () {
     q.textContent = objArray[additiveQuestion].question
