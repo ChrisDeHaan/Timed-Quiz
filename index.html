@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz Challenge</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -37,7 +37,7 @@
     <section class="finishPage" id="finishPage" style="display: none">
         <h5>Finished!</h5>
         <p class="finishP"></p>
-        <input type="text" for="intials" id="initials" placeholder="Enter initials">
+        <input type="text" for="intials" id="initials" placeholder="Enter initials" maxlength="3">
         <label for="initials"><button class="finishBtn" id="submissionButton">Submit</button></label>
 
     </section>
@@ -45,9 +45,10 @@
     <!-- highscores -->
     <section class="highScoresPage" id="highScoresPage" style="display: none">
         <h6>Highscores</h6>
-        <p>dynamically generated list</p>
+        <div id="topScore1"></div>
+        <div id="topScore2"></div>
+        <div id="topScore3"></div>
         <button class="hsTryAgain" id="tryAgain">Try Again</button>
-        <button class="hsClear" id="hsClear">Clear</button>
 
     </section>
     <script src="./assets/js/script.js"></script>
